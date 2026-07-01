@@ -1,0 +1,49 @@
+{
+  "name": "cms-dxp-detector",
+  "version": "1.0.0",
+  "description": "Production-ready CMS, DXP, SSG, and web framework detection scanner",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "cms-detect": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/server.js",
+    "server": "tsx src/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "lint": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cms",
+    "dxp",
+    "detection",
+    "scanner",
+    "sitecore",
+    "wordpress",
+    "playwright"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "commander": "^12.1.0",
+    "express": "^4.22.2",
+    "p-limit": "^6.2.0",
+    "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
