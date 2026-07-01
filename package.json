@@ -9,15 +9,16 @@
     "cms-detect": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsx src/cli.ts",
-    "start": "node dist/server.js",
-    "server": "tsx src/server.ts",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "benchmark": "tsx scripts/benchmark.ts",
-    "lint": "tsc --noEmit"
-  },
+  "build": "tsc",
+  "dev": "tsx src/cli.ts",
+  "start": "node dist/server.js",
+  "server": "tsx src/server.ts",
+  "test": "vitest run",
+  "test:watch": "vitest",
+  "benchmark": "tsx scripts/benchmark.ts",
+  "lint": "tsc --noEmit",
+  "postinstall": "playwright install chromium"
+},
   "engines": {
     "node": ">=18"
   },
